@@ -1,0 +1,68 @@
+<!-- Create a webpage that can be used to let a user store information about a catalogue of books. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/555da73a6d.js" crossorigin="anonymous"></script>
+
+    <title>Book Collection</title>
+</head>
+
+<body onload="displayBooksTable()">
+    <h1>My Book Collection</h1>
+    <h2>Add a Book</h2>
+    <!-- Create as set of input fields to collect information from the user. -->
+    <form action="">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" required>
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author">
+        <br><br>
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre">
+        <label for="review">Review</label>
+        <input type="text" name="review" id="review">
+        <br><br>
+        <button id="subBtn" onclick="addBook()">Add</button>
+    </form>
+    <!-- List of books section - to display book's information in tabular form -->
+    <section id="booksTable">
+        <h2>List of Books</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Review</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <!-- table rows and data will be created dynamically using javascript -->
+            <tbody id="bookRows">
+            </tbody>
+        </table>
+    </section>
+    <br>
+    <!-- <i className="fa fa-pencil-square-o i-edit"
+    aria-hidden="true"
+    title="Edit Task"
+    onClick={() => dispatch(edit(task[0]))}>
+</i>
+<i className="fa fa-times i-delete"
+    aria-hidden="true"
+    title="Delete Task"
+    onClick={() => dispatch(remove(task[0]))}>
+</i> -->
+
+
+
+    <script src="./js//books-refactor.js"></script>
+</body>
+
+</html>
